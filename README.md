@@ -1,3 +1,3 @@
 # Developing and designing server/multi-clients Labyrinthe game
 
-![My image](username.github.com/repository/img/image.jpg)
+![Architecture](https://github.com/KOUISAmine/Robot-Labyrinthe/blob/master/img/labyrinthGame.png)
