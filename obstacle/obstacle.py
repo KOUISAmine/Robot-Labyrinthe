@@ -19,3 +19,7 @@ class Obstacle:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+		
+    def __repr__(self):
+        return "<{nom} (x={x}, y={y})>".format(nom=self.nom,
+                x=self.x, y=self.y)
