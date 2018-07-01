@@ -23,3 +23,6 @@ class Obstacle:
     def __repr__(self):
         return "<{nom} (x={x}, y={y})>".format(nom=self.nom,
                 x=self.x, y=self.y)
+				
+    def __str__(self):
+        return "{nom} ({x}.{y})".format(nom=self.nom, x=self.x, y=self.y)
