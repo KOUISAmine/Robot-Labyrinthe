@@ -10,4 +10,4 @@ class Porte(Obstacle):
 
     peut_traverser = True
     nom = "porte"
-    symbole = "X"
+    symbole = "."
