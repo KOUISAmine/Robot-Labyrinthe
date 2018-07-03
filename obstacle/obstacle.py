@@ -26,3 +26,12 @@ class Obstacle:
 				
     def __str__(self):
         return "{nom} ({x}.{y})".format(nom=self.nom, x=self.x, y=self.y)
+
+    def arriver(self, labyrinthe, robot):
+        """Méthode appelée quand le robot arrive sur la case.
+
+        Il peut être utile de redéfinir cette méthode dans certaines
+        circonstances.
+
+        """
+        pass
