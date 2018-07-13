@@ -24,4 +24,5 @@ class Joueur:
         self.numero = None
         self.robot = None
 
-
+    def __repr__(self):
+        return "<Joueur connecté sur {}>".format(self.client)
