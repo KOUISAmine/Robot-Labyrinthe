@@ -26,3 +26,8 @@ class Joueur:
 
     def __repr__(self):
         return "<Joueur connecté sur {}>".format(self.client)
+
+    def envoyer(self, message):
+        """Envoie le message au client (socket)."""
+        if self.client:
+            self.client.send(message.encode())
