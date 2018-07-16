@@ -31,3 +31,11 @@ class Joueur:
         """Envoie le message au client (socket)."""
         if self.client:
             self.client.send(message.encode())
+			
+    def placer_robot(self):
+        """Place le robot aléatoirement sur la grille."""
+        labyrinthe = self.jeu.labyrinthe
+        grille = labyrinthe.grille
+        libres = []
+        x = 0
+        y = 0
