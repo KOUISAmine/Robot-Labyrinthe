@@ -39,3 +39,24 @@ class Joueur:
         libres = []
         x = 0
         y = 0
+		
+        # D'abord, on cherche les limites x et y de la grille
+        l_x = labyrinthe.limite_x
+        while l_x > 0:
+            if (l_x, 0) in grille:
+                break
+            l_x -= 1
+
+        l_y = labyrinthe.limite_y
+        while l_y > 0:
+            if (0, l_y) in grille:
+                break
+            l_y -= 1
+
+        while y < l_y:
+            x = 0
+            while x < l_x:
+                if (x, y) not in grille:
+                    libres.append((x, y))
+                x += 1
+            y += 1
