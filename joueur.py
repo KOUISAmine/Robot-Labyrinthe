@@ -60,3 +60,8 @@ class Joueur:
                     libres.append((x, y))
                 x += 1
             y += 1
+			
+        x, y = choice(libres)
+        robot = Robot(x, y)
+        labyrinthe.ajouter_robot(robot)
+        self.robot = robot
