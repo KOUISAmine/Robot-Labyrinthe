@@ -61,6 +61,9 @@ class Joueur:
 					libres.append((y, x))
                 x += 1
             y += 1
+            if (0, l_y) in grille:
+                break
+            l_y -= 1
 			
         x, y = choice(libres)
         robot = Robot(x, y)
