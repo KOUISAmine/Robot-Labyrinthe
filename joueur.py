@@ -58,6 +58,7 @@ class Joueur:
             while x < l_x:
                 if (x, y) not in grille:
                     libres.append((x, y))
+					libres.append((y, x))
                 x += 1
             y += 1
 			
@@ -65,3 +66,4 @@ class Joueur:
         robot = Robot(x, y)
         labyrinthe.ajouter_robot(robot)
         self.robot = robot
+		
