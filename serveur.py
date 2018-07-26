@@ -20,3 +20,11 @@ jeu = Jeu(carte)
 for i, commande in enumerate(commandes):
     # Commande Instanciation
     commandes[i] = commande(jeu)
+
+	
+# On connete le serveur
+clients = []
+connexion = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+connexion.bind(('localhost', 29408))
+connexion.listen(5)
+print("On attend les clients.")

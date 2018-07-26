@@ -52,8 +52,7 @@ class Joueur:
         libres = []
         x = 0
         y = 0
-       x = 0
-        y = 0
+
         # D'abord, on cherche les limites x et y de la grille
         l_x = labyrinthe.limite_x
         while l_x > 0:
