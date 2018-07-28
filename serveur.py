@@ -22,9 +22,14 @@ for i, commande in enumerate(commandes):
     commandes[i] = commande(jeu)
 
 	
-# On connete le serveur
+#Connect
 clients = []
 connexion = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connexion.bind(('localhost', 29408))
 connexion.listen(5)
 print("On attend les clients.")
+
+#Disconnect
+for client in clients:
+    client.send("La partie est finie !".encode())
+    client.close()
