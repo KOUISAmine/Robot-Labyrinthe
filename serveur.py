@@ -29,6 +29,15 @@ connexion.bind(('localhost', 29408))
 connexion.listen(5)
 print("On attend les clients.")
 
+# Card choice
+labyrinthe = None
+while labyrinthe is None:
+    choix = input("Entrez un numéro de labyrinthe pour commencer à jouer : ")
+    try:
+        choix = int(choix)
+    except ValueError:
+        print("Choix invalide : {}".format(choix))
+
 #Disconnect
 for client in clients:
     client.send("La partie est finie !".encode())
