@@ -37,6 +37,10 @@ while labyrinthe is None:
         choix = int(choix)
     except ValueError:
         print("Choix invalide : {}".format(choix))
+		    else:
+				if choix < 1 or choix > len(cartes):
+					print("Numéro invalide : ".format(choix))
+					continue
 
 #Disconnect
 for client in clients:
