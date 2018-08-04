@@ -41,7 +41,10 @@ while labyrinthe is None:
 				if choix < 1 or choix > len(cartes):
 					print("Numéro invalide : ".format(choix))
 					continue
-
+				carte = cartes[choix - 1]
+				labyrinthe = carte.labyrinthe
+		
+		
 #Disconnect
 for client in clients:
     client.send("La partie est finie !".encode())
