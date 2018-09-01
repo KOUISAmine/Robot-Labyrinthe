@@ -43,8 +43,13 @@ while labyrinthe is None:
 					continue
 				carte = cartes[choix - 1]
 				labyrinthe = carte.labyrinthe
-		
-		
+
+#start playing				
+jeu = Jeu(carte)
+for i, commande in enumerate(commandes):
+    # Instanciation de la commande
+    commandes[i] = commande(jeu)
+	
 #Disconnect
 for client in clients:
     client.send("La partie est finie !".encode())
